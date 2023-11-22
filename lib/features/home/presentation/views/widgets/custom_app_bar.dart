@@ -1,5 +1,6 @@
 import 'package:bookly_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
@@ -8,14 +9,14 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     // var topSafeArea = MediaQuery.of(context).viewPadding.top;
     return Padding(
-      padding: const EdgeInsets.only(top: 48, left: 30, right: 30),
+      padding: EdgeInsets.only(top: 48.h, left: 30.w, right: 30.w),
       child: Row(
         children: [
-          Image.asset(AssetsData.logo, width: 75),
+          Image.asset(AssetsData.logo, width: 75.w),
           const Spacer(),
           IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.search, size: 25),
+            icon: Icon(Icons.search, size: 25.w),
           ),
         ],
       ),
