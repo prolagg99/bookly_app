@@ -3,14 +3,16 @@ import 'package:bookly_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class CustomBookCard extends StatelessWidget {
-  const CustomBookCard({super.key});
+class CustomBookImage extends StatelessWidget {
+  const CustomBookImage({super.key, this.width = 129, this.higth = 193});
+  final double? width;
+  final double? higth;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 129.h,
-      height: 193.w,
+      width: width!.w,
+      height: higth!.w,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(14),
         border: Border.all(
