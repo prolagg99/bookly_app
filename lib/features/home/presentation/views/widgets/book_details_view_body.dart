@@ -17,53 +17,58 @@ class BookDetailsViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(top: 44.h),
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            const CustomBookDetailsAppBar(),
-            SizedBox(height: 33.h),
-            const CustomBookImage(width: 162, higth: 243),
-            SizedBox(height: 43.h),
-            Text(
-              "The Jungle Book",
-              style: Styles.textStyle30.copyWith(
-                fontFamily: kGtSectraFine,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            SizedBox(height: 6.h),
-            Text(
-              "Rudyard Kipling",
-              style: Styles.textStyle18.copyWith(
-                fontStyle: FontStyle.italic,
-                color: Colors.white.withOpacity(.7),
-              ),
-            ),
-            SizedBox(height: 16.h),
-            const BookRating(),
-            SizedBox(height: 36.h),
-            Padding(
-              padding: EdgeInsets.only(left: 30.w, right: 30.w),
-              child: const BooksActions(),
-            ),
-            SizedBox(height: 50.h),
-            Padding(
-              padding: EdgeInsets.only(left: 30.w, right: 30.w),
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  "You can also like",
-                  style: Styles.textStyle14.copyWith(
-                    fontWeight: FontWeight.w600,
+      child: CustomScrollView(
+        slivers: [
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              children: [
+                const CustomBookDetailsAppBar(),
+                SizedBox(height: 33.h),
+                const CustomBookImage(width: 162, higth: 243),
+                SizedBox(height: 43.h),
+                Text(
+                  "The Jungle Book",
+                  style: Styles.textStyle30.copyWith(
+                    fontFamily: kGtSectraFine,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
-              ),
+                SizedBox(height: 6.h),
+                Text(
+                  "Rudyard Kipling",
+                  style: Styles.textStyle18.copyWith(
+                    fontStyle: FontStyle.italic,
+                    color: Colors.white.withOpacity(.7),
+                  ),
+                ),
+                SizedBox(height: 16.h),
+                const BookRating(),
+                SizedBox(height: 36.h),
+                Padding(
+                  padding: EdgeInsets.only(left: 30.w, right: 30.w),
+                  child: const BooksActions(),
+                ),
+                Expanded(child: SizedBox(height: 50.h)),
+                Padding(
+                  padding: EdgeInsets.only(left: 30.w, right: 30.w),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      "You can also like",
+                      style: Styles.textStyle14.copyWith(
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 16.h),
+                const SimilarBooksListView(),
+                SizedBox(height: 40.h),
+              ],
             ),
-            SizedBox(height: 16.h),
-            const SimilarBooksListView(),
-            SizedBox(height: 40.h),
-          ],
-        ),
+          )
+        ],
       ),
     );
   }
