@@ -18,6 +18,8 @@ class SimilarBooksListView extends StatelessWidget {
             child: const CustomBookImage(
               width: 70,
               radius: 7,
+              imageUrl:
+                  "https://www.google.com/url?sa=i&url=https%3A%2F%2Fedit.org%2Fbook-covers&psig=AOvVaw0xXiu030cQizm9d5Lsk1-L&ust=1702277228382000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCLDXo_6ihIMDFQAAAAAdAAAAABAE",
             ),
           );
         },

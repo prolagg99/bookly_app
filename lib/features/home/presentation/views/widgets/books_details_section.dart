@@ -13,7 +13,12 @@ class BooksDetailsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const CustomBookImage(width: 162, higth: 243),
+        const CustomBookImage(
+          width: 162,
+          higth: 243,
+          imageUrl:
+              "https://www.google.com/url?sa=i&url=https%3A%2F%2Fedit.org%2Fbook-covers&psig=AOvVaw0xXiu030cQizm9d5Lsk1-L&ust=1702277228382000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCLDXo_6ihIMDFQAAAAAdAAAAABAE",
+        ),
         SizedBox(height: 43.h),
         Text(
           "The Jungle Book",

@@ -17,12 +17,17 @@ class FeauturedBooksListView extends StatelessWidget {
           return SizedBox(
             height: 193.w,
             child: ListView.builder(
+              physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
               padding: EdgeInsets.symmetric(horizontal: 30.w),
+              itemCount: state.books.length,
               itemBuilder: (context, index) {
                 return Padding(
                   padding: EdgeInsets.only(right: 15.w),
-                  child: const CustomBookImage(),
+                  child: CustomBookImage(
+                    imageUrl:
+                        state.books[index].volumeInfo.imageLinks.thumbnail,
+                  ),
                 );
               },
             ),
