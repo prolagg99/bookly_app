@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:bookly_app/core/errors/failures.dart';
 import 'package:bookly_app/core/utils/api_service.dart';
 import 'package:bookly_app/features/home/data/models/book_model/book_model.dart';
@@ -39,7 +41,8 @@ class HomeRepoImpl implements HomeRepo {
 
       List<BookModel> books = [];
       for (var item in data['items']) {
-        books.add(item);
+        log('$item');
+        books.add(BookModel.fromJson(item));
       }
 
       return right(books);
