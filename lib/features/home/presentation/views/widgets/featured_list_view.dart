@@ -26,7 +26,8 @@ class FeauturedBooksListView extends StatelessWidget {
                   padding: EdgeInsets.only(right: 15.w),
                   child: CustomBookImage(
                     imageUrl:
-                        state.books[index].volumeInfo.imageLinks.thumbnail,
+                        state.books[index].volumeInfo.imageLinks?.thumbnail ??
+                            "",
                   ),
                 );
               },
