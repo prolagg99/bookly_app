@@ -64,7 +64,9 @@ class BookListViewItem extends StatelessWidget {
                       //   ),
                       // ),
                       const Spacer(),
-                      const BookRating(),
+                      const BookRating(
+                        rating: 0.0,
+                      ),
                     ],
                   )
                 ],
