@@ -45,7 +45,9 @@ class BooksDetailsSection extends StatelessWidget {
         SizedBox(height: 36.h),
         Padding(
           padding: EdgeInsets.only(left: 30.w, right: 30.w),
-          child: const BooksActions(),
+          child: BooksActions(
+            bookModel: bookModel,
+          ),
         ),
       ],
     );
